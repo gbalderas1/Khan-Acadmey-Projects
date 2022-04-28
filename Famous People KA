@@ -1,0 +1,33 @@
+/* Create table about the people and what they do here */
+
+CREATE TABLE movie_stars (
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+fullname TEXT,
+age INTEGER);
+
+INSERT INTO movie_stars (fullname, age) VALUES ("Ryan Reynold", 45);
+INSERT INTO movie_stars (fullname, age) VALUES ("Tom Holland", 25);
+INSERT INTO movie_stars (fullname, age) VALUES ("Leonardo DiCaprio", 47);
+INSERT INTO movie_stars (fullname, age) VALUES ("Sandra Bullock", 57);
+INSERT INTO movie_stars (fullname, age) VALUES ("Meryl Streep", 72);
+INSERT INTO movie_stars (fullname, age) VALUES ("Julia Roberts", 54);
+INSERT INTO movie_stars (fullname, age) VALUES ("Chris Evans", 40);
+
+CREATE TABLE movies (
+id INTEGER PRIMARY KEY,
+biggest_movie TEXT,
+boxoffice INTEGER);
+
+INSERT INTO movies (id, biggest_movie, boxoffice) VALUES (1, "Deadpool", 783100000);
+INSERT INTO movies (id, biggest_movie, boxoffice) VALUES (2, "Spider-Man: No Way Home", 1892000000);
+INSERT INTO movies (id, biggest_movie, boxoffice) VALUES (3, "Titanic", 2202000000);
+INSERT INTO movies (id, biggest_movie, boxoffice) VALUES (4, "Blindside", 309200000);
+INSERT INTO movies (id, biggest_movie, boxoffice) VALUES (5, "Mamma Mia", 610000000);
+INSERT INTO movies (id, biggest_movie, boxoffice) VALUES (6, "Pretty Woman", 463400000);
+INSERT INTO movies (id, biggest_movie, boxoffice) VALUES (7, "Avengers: Endgame", 2798000000);
+
+SELECT movie_stars.fullname, movies.biggest_movie, movies.boxoffice
+    FROM movie_stars
+    JOIN movies
+    ON movie_stars.id = movies.id;
+    
