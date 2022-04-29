@@ -1,0 +1,42 @@
+/* What does the app's SQL look like? */
+
+CREATE TABLE running (
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+date TEXT,
+miles INTEGER,
+time INTEGER, 
+avg_hr INTEGER,
+cadence INTEGER);
+
+INSERT INTO running (date, miles, time, avg_hr, cadence) VALUES ("1-4-22", 5.38, 43.35, 174, 178);
+INSERT INTO running (date, miles, time, avg_hr, cadence) VALUES ("1-7-22", 4, 33.52, 178, 175);
+INSERT INTO running (date, miles, time, avg_hr, cadence) VALUES ("1-11-22", 7.01, 61.28, 174, 176);
+INSERT INTO running (date, miles, time, avg_hr, cadence) VALUES ("1-12-22", 5.47, 48.20, 165, 176);
+INSERT INTO running (date, miles, time, avg_hr, cadence) VALUES ("1-17-22", 8.01, 70.11, 172, 176);
+INSERT INTO running (date, miles, time, avg_hr, cadence) VALUES ("1-22-22", 8.15, 68.30, 168, 177);
+INSERT INTO running (date, miles, time, avg_hr, cadence) VALUES ("1-25-22", 10.02, 86.16, 176, 174);
+INSERT INTO running (date, miles, time, avg_hr, cadence) VALUES ("1-28-22", 2.09, 16.31, 172, 170);
+INSERT INTO running (date, miles, time, avg_hr, cadence) VALUES ("2-2-22", 6.26, 51.35, 170, 177);
+INSERT INTO running (date, miles, time, avg_hr, cadence) VALUES ("2-7-22", 10.38, 93.12, 166, 169);
+INSERT INTO running (date, miles, time, avg_hr, cadence) VALUES ("2-9-22", 3.28, 23.25, 169, 176);
+INSERT INTO running (date, miles, time, avg_hr, cadence) VALUES ("2-16-22", 13.10, 112.05, 166, 177);
+INSERT INTO running (date, miles, time, avg_hr, cadence) VALUES ("2-25-22", 6.22, 44.20, 173, 179);
+INSERT INTO running (date, miles, time, avg_hr, cadence) VALUES ("3-1-22", 4.01, 28.43, 170, 178);
+INSERT INTO running (date, miles, time, avg_hr, cadence) VALUES ("3-6-22", 6.23, 49.29, 176, 182);
+INSERT INTO running (date, miles, time, avg_hr, cadence) VALUES ("3-11-22", 3.19, 34.11, 170, 180);
+INSERT INTO running (date, miles, time, avg_hr, cadence) VALUES ("4-27-22", 4.08, 33.02, 171, 177);
+INSERT INTO running (date, miles, time, avg_hr, cadence) VALUES ("4-28-22", 6.27, 53.37, 182, 179);
+
+SELECT * FROM running;
+
+UPDATE running SET cadence = 180 WHERE id = 13;
+
+SELECT * FROM running;
+
+DELETE FROM running WHERE id = 13;
+
+SELECT * FROM running;
+
+
+
+
