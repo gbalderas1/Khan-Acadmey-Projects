@@ -36,7 +36,3 @@ SELECT * FROM running;
 DELETE FROM running WHERE id = 13;
 
 SELECT * FROM running;
-
-
-
-
